@@ -10,6 +10,7 @@ class Person:
         self.height = height
         self.weight = weight
 
+    @classmethod 
     def show(cls):
         return cls.data
 
