@@ -13,6 +13,10 @@ class Person:
     @classmethod 
     def show(cls):
         return cls.data
+    
+    @staticmethod
+    def info():
+        return "Static method"
 
     # methods (behaviours)
     def studying(self, course):
