@@ -11,7 +11,7 @@ class Person:
         self.name = name  
         self.height = height
         self.weight = weight
-        Person.counter += 1
+        Person.count += 1
 
     @classmethod 
     def show(cls):
@@ -30,7 +30,7 @@ class Person:
 diego = Person("Diego", 178, 40)
 mechy = Person("Mercedes", 170, 41)
 
-print("Persons: ", Person.counter)
+print("Persons: ", Person.count)
 # working with methods
 print(f"{diego.name}")
 print(f"Height: {diego.height} centimeters.")
@@ -50,7 +50,7 @@ print(mechy.show(), "\n")
 # Silvi person
 silvi = Person("Silvina", 174, 42)
 
-print("Persons: ", Person.counter)
+print("Persons: ", Person.count)
 print(f"{silvi.name}")
 print(f"Height: {diego.height} centimeters.")
 print(f"Weight: {silvi.weight} kilograms.")
