@@ -3,12 +3,15 @@
 class Person:
     # class attributes
     data = "Height is centimeters and weight is in kilograms."
-
+    count = 0
+    
     # session attributes
     def __init__(self, name, height, weight):
-        self.name = name
+        # Instance attributes
+        self.name = name  
         self.height = height
         self.weight = weight
+        Person.counter += 1
 
     @classmethod 
     def show(cls):
@@ -19,7 +22,7 @@ class Person:
         return "Static method"
 
     # methods (behaviours)
-    def studying(self, course):
+    def studying(self, course): # instance method
         return ("{} is stydying {}".format(self.name, course))
 
 
@@ -27,6 +30,7 @@ class Person:
 diego = Person("Diego", 178, 40)
 mechy = Person("Mercedes", 170, 41)
 
+print("Persons: ", Person.counter)
 # working with methods
 print(f"{diego.name}")
 print(f"Height: {diego.height} centimeters.")
@@ -46,6 +50,7 @@ print(mechy.show(), "\n")
 # Silvi person
 silvi = Person("Silvina", 174, 42)
 
+print("Persons: ", Person.counter)
 print(f"{silvi.name}")
 print(f"Height: {diego.height} centimeters.")
 print(f"Weight: {silvi.weight} kilograms.")
