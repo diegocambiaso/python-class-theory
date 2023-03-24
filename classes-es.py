@@ -24,6 +24,13 @@ class Person:
     # methods (behaviours)
     def studying(self, course): # método de instancia
         return ("{} está estudiando {}".format(self.name, course))
+    
+    def __repr__(self):
+        class_name = type(self).__name__
+        return f"{class_name}(Persona={self.name!r})"
+
+    def __str__(self):
+        return self.name
 
 
 # instnaciando clases (crenado objetos)
@@ -56,3 +63,6 @@ print(f"Altura: {diego.height} centimetros.")
 print(f"Peso: {silvi.weight} kilogramos.")
 print(silvi.studying("Flutter"))
 print(silvi.show(), "\n")
+
+print(repr(diego))
+print(str(diego))
