@@ -25,10 +25,11 @@ class Person:
     def studying(self, course): # instance method
         return ("{} is stydying {}".format(self.name, course))
     
+    # __repr__
     def __repr__(self):
         class_name = type(self).__name__
         return f"{class_name}(Persona={self.name!r})"
-
+    # __str__
     def __str__(self):
         return self.name
 
@@ -64,6 +65,7 @@ print(f"Weight: {silvi.weight} kilograms.")
 print(silvi.studying("Flutter"))
 print(silvi.show(), "\n")
 
+# Using __repr and __str__
 print(repr(diego))
 print(str(diego))
 
