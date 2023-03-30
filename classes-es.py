@@ -5,7 +5,7 @@ class Person:
     data = "La altura es en centímetros y el peso es en kilogramos."
     count = 0
     
-    # atrubutos de instancia
+    # atributos de instancia
     def __init__(self, name, height, weight):
         # Instance attributes
         self.name = name  
@@ -39,7 +39,7 @@ class Person:
 diego = Person("Diego", 178, 40)
 mechy = Person("Mercedes", 170, 41)
 
-print("Persons: ", Person.count)
+print("Personas: ", Person.count)
 # trabajando con métodos
 print(f"{diego.name}")
 print(f"Altura: {diego.height} centímetros.")
