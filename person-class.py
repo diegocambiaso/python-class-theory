@@ -11,7 +11,7 @@ class Person:
         self.name = name  
         self.height = height
         self.weight = weight
-        Person.count += 1
+        Person.count += 1 # count instances
 
     @classmethod 
     def show(cls):
