@@ -12,6 +12,11 @@ class Person:
         self.height = height
         self.weight = weight
         Person.count += 1
+        
+    # El decorador @property permite que un método actue como una propiedad
+    @property
+    def mi_attribute(self):
+        return self.__mi_attribute
 
     @classmethod 
     def show(cls):
